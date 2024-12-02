@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+      background-color: white;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: black
+    }
+    .navbar-nav .nav-link {
+      color: black;
+      margin-right: 10px;
+    }
+      .navbar-nav .nav-item.active .nav-link {
+      color: #0056b3;
+    }
+   
+     .hero {
+      position: relative;
+      height: 500px;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(5, 34, 66, 0.735); 
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #ffffff;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 10px 0 0;
+      color: #ffffff;
+    }
+    .service-icon {
+          font-size: 30px;
+          color: blue;
+        }
+        .service-card {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        
+        }
+        .service-card1 {
+            text-align: center;
+            padding: 10%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        
+        }
+        
+        /* General Section Styling */
+.metrics-section {
+    background-color: #f8f9fa; /* Light background to match your screenshot */
+}
+
+/* Metric Box */
+.metric-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Icon Styling */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border: 1px solid #dfe3e6;
+    border-radius: 50%; /* Circular background for icons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the icon container */
+}
+
+.icon-img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Card Styling */
+.metric-card {
+    margin-top: 40px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #dfe3e6; /* Light gray border */
+    border-radius: 12px; /* Smooth rounded corners for the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
+}
+
+h2 {
+    color: blue;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666; /* Gray text for descriptions */
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo-img {
+      width: 100px; /* Adjust size for all logos */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .logo-grid {
+      row-gap: 30px; /* Adds space between rows */
+    }
+    .ted {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9fcff;
+    color: #333;
+}
+
+
+
+.dave {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.david {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.team-card {
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .col {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+.team-section {
+    text-align: center;
+    padding: 20px;
+}
+.din {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dan {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+    display: flex; /* Ensures child elements stretch */
+}
+
+.course-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Makes all cards equal height */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Spread content evenly */
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.course-card ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.course-card button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.course-card button:hover {
+    background-color: #004fc4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.real {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8fbff;
+    color: #333;
+    padding: 20px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-header h2 {
+    font-size: 2rem;
+    color: #0d6efd;
+}
+
+.faq-header h2 span {
+    color: #333;
+}
+
+.faq-header p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.faq-container {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0d6efd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f8ff;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #f8f9fa;
+    color: #555;
+    font-size: 0.9rem;
+    border-left: 3px solid #0d6efd;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 15px;
+    }
+}
+.den {
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-section {
+            padding: 50px 15px;
+        }
+
+        
+
+    
+
+        .contact-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .contact-box h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            margin: 0;
+            color: #555;
+        }
+
+        .form-control,
+        .btn {
+            margin-bottom: 15px;
+        }
+
+        .map {
+            border: 0;
+            width: 100%;
+            height: 300px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-box {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i style="font-size: 40px; color: #0056b3;" class="fa fa-television" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: black;" class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a  style="color: black;"class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a  style="color: black;"class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: black;" class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: black;" class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="hero">
+        <img src="img/pexels-zhuhehuai-716281.jpg" alt="Background Image">
+        <div class="hero-content" style="text-align: left; left: 60px;">
+          <h1 style="font-size: 50px; ">Welcome to Gateway Technology</h1>
+          <p style="font-size: 20px;">We are team of talented IT experts who provide end to end digital and capacity-building training solutions <br> that result in job placements and improvement in service delivery amongst our many other services"</p>
+          <br>
+          
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <button class="btn btn-primary" style="color: white; background-color: rgba(0, 0, 255, 0.8); padding: 10px 20px; border-radius: 5px; font-size: 16px; border: none;">Get Started</button>
+            <a href="#" style="display: flex; align-items: center; text-decoration: none; color: white;">
+              <i class="fa fa-play-circle-o" style="font-size: 30px; color: rgba(0, 0, 255, 0.479); margin-right: 8px;"></i>
+              <span style="font-size: 16px; color: white;">Watch Video</span>
+            </a>
+          </div>
+          
+
+        </div>
+      </div>
+<br>
+      <section>
+        <div class="container">
+            <div class="text-center mb-5">
+                <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">SERVICES</span>
+                <h2 class="mt-3">Check our <span style="color: rgba(32, 32, 185, 0.795);">Services</span></h2>
+                <p class="text-muted">Gateway Computer Technology is a problem solver and solutions <br> expert in the field of IT. We deal in Web Development, Skill <br> Development, Graphics Design, System Maintenance, and Mobile <br> Applications.</p>
+            </div>
+            <div class="row">
+               <div class="col-12 col-md-4">
+                    <div class="service-card " data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">
+                      <p class="service-icon"><i class="fa fa-futbol-o" aria-hidden="true"></i></p>
+                        <h5 class="mt-3">Professional Training</h5>
+                        <p class="text-muted">Become relevant in the world today by advancing your career with any of our end-to-end training solutions. We are proud to say we have boosted the effectiveness of several trainees in the contemporary workplace.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="service-card" data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">
+                      <p class="service-icon"><i class="fa fa-file-o" aria-hidden="true"></i></p>
+                        <h5 class="mt-3">Website Design & Development</h5>
+                        <p class="text-muted">Our dedicated team of designers and developers are passionate about turning ideas into visually stunning and highly functional websites with premium hosting services as well as unlimited tech support.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4" >
+                    <div class="service-card" data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">
+                        <p class="service-icon"><i class="fa fa-rebel" aria-hidden="true"></i></i></p>
+                        <h5 class="mt-3">Graphics Design</h5>
+                        <p class="text-muted">For over 7 years, we have put smiles on the faces of several organizations by creating compelling brand identities like logos, brand illustrations, printing services, video promos, documentaries & jingles.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4" style="margin-top: 2%;" >
+                  <div class="service-card" data-aos="fade-up"
+                  data-aos-anchor-placement="center-bottom">
+                      <p class="service-icon"><i class="fa fa-globe" aria-hidden="true"></i></p>
+                      <h5 class="mt-3">Hardware Maintenance</h5>
+                      <p class="text-muted">When your computer encounters issues, it can disrupt your work, communication, and productivity. That's where we step in, with a team of highly skilled technicians ready to diagnose and resolve any computer problem. Whether it's a hardware malfunction or software glitches, we provide swift and effective solutions to get your computer back in peak condition.</p>
+                  </div>
+              </div>
+              <div class="col-12 col-md-4" style="margin-top: 2%;">
+                <div class="service-card" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <p class="service-icon"><i class="fa fa-laptop" aria-hidden="true"></i></p>
+                    <h5 class="mt-3">Software Installation & Maintenance</h5>
+                    <p class="text-muted">We understand the critical role that software plays in today's technology-driven world, and we take pride in ensuring that our clients' software is seamlessly installed and meticulously maintained. Our skilled technicians handle the installation process with precision, ensuring that all software components are set up correctly.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" style="margin-top: 2%;">
+              <div class="service-card" data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom">
+                  <p class="service-icon"><i class="fa fa-maxcdn" aria-hidden="true"></i></p>
+                  <h5 class="mt-3">Corporate Training</h5>
+                  <p class="text-muted">With our tailored corporate training programs, we provide comprehensive, industry-relevant education that equips employees with the latest tools, techniques, and insights. Whether it's upskilling in technology, leadership development, or addressing specific industry challenges, our training initiatives are thoughtfully curated to meet the unique needs of each client.</p>
+              </div>
+          </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section style="background-color: rgba(135, 206, 250, 0.126); "> 
+      <div class="container" data-aos="fade-up"
+      data-aos-duration="3000">>
+          <div class="text-center mb-5 pt-5">
+              <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">ABOUT</span>
+              <h2 class="mt-3">Find Out More<span style="color: rgba(32, 32, 185, 0.795); padding-left: 1%;">About Us </span></h2>
+              <p class="text-muted">Gateway Computer Technologyis Nigeiria's leading innovative and <br>Solutions Company that provides top-notch solutions for corporate <br> organizations and start-ups.</p>
+              <div class="container">
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-md-6 ">
+                        <img src="img/about.webp" width="100%"></img>
+                    </div>
+                    <div class=" col-md-6">
+                        <h6 style="font-size: 25px;color: #555; font-weight: bold; text-align: left;">Our Team of Professionals are wired to exceed the expectations of our clients.</h6>
+                                <p style=" font-size: 13px; color: #555; text-align: left;">Our tried and true system is based off over 10 years’ cumulative experience shared between our trainers. We pride ourselves in setting up our students and clients for success in this world of technology and are sure that the learners will complete our sessions more prepared than they have ever been.</p> <br>
+                                <div style="text-align: left;">
+
+                               
+                                 <span style="padding: 16px; border-radius: 200px; background-color: white;"> <i style="font-size: 30px; color: blue;" class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                                 
+                               <span style="font-size: 20px;color: #555; font-weight: bold;  ">Excellence is What Drives Us</span>
+                               <p style=" font-size: 13px; color: #555; text-align: left; margin-top: 20px; margin-left: 50px;">Our tried and true system is based off over 10 years’ cumulative experience shared between our trainers. We pride ourselves in setting up our students and clients for success in this world of technology and are sure that the learners will complete our sessions more prepared than they have ever been.</p> <br>
+
+                               <span style="padding: 16px; border-radius: 200px; background-color: white;"> <i style="font-size: 30px; color: blue;" class="fa fa-file-image-o" aria-hidden="true"></i></span>
+                                 
+                               <span style="font-size: 20px;color: #555; font-weight: bold;  ">Our Cutting Edge Toolkit</span>
+                               <p style=" font-size: 13px; color: #555; text-align: left; margin-top: 20px; margin-left: 50px;">Our top notch tools and proficient team helps in custom web builds, app development and also provide management services. We make development easier by choosing the best.</p>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </section>
+                              
+                              <br>
+                              <br>
+
+                              <div>
+                                <img src="img/pexels-fauxels-3184328.jpg" alt="" width="100%">
+                              </div>
+
+                              
+                            
+
+              
+         
+        <br>
+        <br>
+
+ 
+    <section class="metrics-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                
+                <div class="col-md-3">
+                    <div class="metric-box">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="https://img.icons8.com/ios-filled/50/happy--v1.png" alt="Happy Icon" class="icon-img">
+                            </div>
+                        </div>
+                        <div class="metric-card border rounded p-3" style="color: blue;">
+                          <br>
+                            <h2>1327</h2>
+                            <p>Trained Participants</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="metric-box">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="https://img.icons8.com/ios-filled/50/planner.png" alt="Project Icon" class="icon-img">
+                            </div>
+                        </div>
+                        <div class="metric-card border rounded p-3" style="color: blue;">
+                          <br>
+                            <h2>121</h2>
+                            <p>Projects</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="metric-box">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="https://img.icons8.com/ios-filled/50/headset--v1.png" alt="Support Icon" class="icon-img">
+                            </div>
+                        </div>
+                        <div class="metric-card border rounded p-3" style="color: blue;">
+                          <br>
+                            <h2>1463</h2>
+                            <p>Hours Of Support</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="metric-box">
+                        <div class="icon-container">
+                            <div class="icon">
+                              <i style="font-size: 20px;" class="fa fa-users" aria-hidden="true"></i> 
+                            </div>
+                        </div>
+                        <div class="metric-card border rounded p-3" style="color: blue;">
+                          <br>
+                            <h2>15</h2>
+                            <p>Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary">Our Clients & Partners</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row text-center logo-grid">
+        <div class="col-6 col-md-3">
+          <img src="img/client-1.png" alt="Client 1" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-2.png" alt="Client 2" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-3.png" alt="Client 3" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-4.png" alt="Client 4" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-5.png" alt="Client 5" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-6.png" alt="Client 6" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-7.png" alt="Client 7" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-8.png" alt="Client 8" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-9.png" alt="Client 9" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-10.png" alt="Client 10" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-11.png" alt="Client 11" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-12.png" alt="Client 12" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-13.png" alt="Client 13" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-14.png" alt="Client 14" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-15.png" alt="Client 15" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-16.png" alt="Client 16" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-17.png" alt="Client 17" class="logo-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/client-18.png" alt="Client 18" class="logo-img">
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+             <div class="service-card " data-aos="fade-up"
+             data-aos-anchor-placement="center-bottom">
+               <p class="service-icon" style="text-align: left;"><i class="fa fa-futbol-o" aria-hidden="true"></i></p>
+                 <h5 class="mt-3">
+                  Complete Solution</h5>
+                 <p class="text-muted">
+                  Gateway Computer Technology offers a complete solution for all your digital business requirements.</p>
+             </div>
+         </div>
+         <div class="col-12 col-md-3">
+             <div class="service-card1" data-aos="fade-up"
+             data-aos-anchor-placement="center-bottom">
+               <p class="service-icon" style="text-align: left;"><i class="fa fa-file-o" aria-hidden="true"></i></p>
+                 <h5 class="mt-3">
+                  Reusable code</h5>
+                 <p class="text-muted">Reusable code is necessary and highly valuable for any software product. It helps to keep your code base simple and reduces repetition.</p>
+             </div>
+         </div>
+         <div class="col-12 col-md-3" >
+             <div class="service-card" data-aos="fade-up"
+             data-aos-anchor-placement="center-bottom">
+                 <p class="service-icon" style="text-align: left;"><i class="fa fa-rebel" aria-hidden="true"></i></i></p>
+                 <h5 class="mt-3">
+                  Excellent Quality</h5>
+                 <p class="text-muted">We believe in compromising only on price – not on quality or design. Rest assured, you will get the best from us.</p>
+             </div>
+         </div>
+         <div class="col-12 col-md-3" >
+           <div class="service-card" data-aos="fade-up"
+           data-aos-anchor-placement="center-bottom">
+               <p class="service-icon" style="text-align: left;"><i class="fa fa-globe" aria-hidden="true"></i></p>
+               <h5 class="mt-3">
+                Mentorship</h5>
+               <p class="text-muted">Our experienced mentors work closely with trainees to help them apply their newfound skills to real-world scenarios</p>
+           </div>
+       </div>
+          
+
+      </div>
+
+    </div>
+
+
+
+
+
+        
+<br>
+<br>
+<br>
+      <section>
+        <div class="team-section">
+            <div class="text-center mb-5">
+                <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">Portfolio</span>
+                <h2 class="mt-3">Why we are<span style="color: rgba(32, 32, 185, 0.795); padding-left: 1%;">Amazing!</span></h2>
+                <p class="text-muted">We have expertise in IT training, mobile application design and development, web<br> development, software development, graphics design, hardware maintenance, <br> software maintenance and consulting.</p>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="img/portfolio-1.webp" alt="" style="height: 80vh; width: 100%; object-fit: cover; margin-top: 3%;">
+                  <img src="img/yes2.webp" alt=""  width="100%" style="margin-top: 3%;">
+                  <img src="img/portfolio-8.webp" alt="" width="100%" style="margin-top: 3%;">
+                  <img src="img/portfolio-9.webp" alt="" width="100%" style="margin-top: 8%;">
+
+
+                </div>
+
+                <div class="col-lg-8">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img src="img/portfolio-2.webp" alt="" width="100%" style="margin-top: 3%;">
+                      <img src="img/portfolio-4.webp" alt="" width="100%" style="margin-top: 3%;">
+                      <img src="img/yes1.webp" alt="" style="height: 80vh; width: 100%; object-fit: cover; margin-top: 3%;">
+                     <img src="img/download2.webp" alt="" width="100%" style="margin-top: 3%;">
+
+                    </div>
+                    <div class="col-lg-6">
+                      <img src="img/portfolio-3.webp" alt="" width="100%" style="margin-top: 3%;">
+                      <img src="img/portfolio-5.webp" alt="" style="height: 80vh; width: 100%; object-fit: cover; margin-top: 3%;">
+                      <img src="img/download2.webp" alt="" width="100%" style="margin-top: 3%;">
+                      <img src="img/portfolio-11.webp" alt="" width="100%" style="margin-top: 8%;">
+                      
+
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+              </div>
+              </div>
+            </section>
+            
+            
+              
+
+
+
+            <section>
+              <div class="container">
+                  <div class="text-center" style="margin-top: 15%;">
+                      <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">Team</span>
+                      <h2 class="mt-3">Our Hardworking<span style="color: rgba(32, 32, 185, 0.795); padding-left: 1%;">Team</span></h2>
+                      <p class="text-muted">We are Young, Talented and Wired to Surpass the Norm</p>
+                  </div>
+                  <br>
+                  <div class="row dave">
+                      <div class="col david">
+                          <div class="team-card">
+                              <img src="img/team-1.webp" alt="Immanuel Gates">
+                              <h3>Immanuel Gates</h3>
+                              <p>Graphic Designer | Web Developer <br> Data Analyst | CompTIA A+ Expert</p>
+                          </div>
+                      </div>
+                      <div class="col david">
+                          <div class="team-card">
+                              <img src="img/team-2.webp" alt="Victor Okoroafor">
+                              <h3>Victor Okoroafor</h3>
+                              <p>SEO Expert | Digital Marketer <br> Backend Engineer</p>
+                          </div>
+                      </div>
+                      <div class="col david">
+                          <div class="team-card">
+                              <img src="img/team-3.webp" alt="Abdulrazaq Salihu">
+                              <h3>Abdulrazaq Salihu</h3>
+                              <p>Mobile App Developer <br> Fullstack Web Developer</p>
+                          </div>
+                      </div>
+                      <div class="col david">
+                          <div class="team-card">
+                              <img src="img/team-4.webp" alt="Kasie Madu">
+                              <h3>Kasie Madu</h3>
+                              <p>UI/UX Designer <br> Fullstack Web Developer</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            </section>
+
+
+            <div class="courses-section">
+              <div class="container">
+                <div class="text-center" style="margin-top: 10%;">
+                    <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">Courses</span>
+                    <h2 class="mt-3">Check our<span style="color: rgba(32, 32, 185, 0.795); padding-left: 1%;">Courses</span></h2>
+                    <p class="text-muted">Learn a range of digital courses designed to help grow your business or jump-start <br>your career.</p>
+                </div>
+                <br>
+              
+              <div class="row din">
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Data Analysis/Data Science <br> Beginner to Intermediate</h3>
+                          <p>8 weeks</p>
+                          <ul>
+                              <li>Basic Excel</li>
+                              <li>Intermediate Excel</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Data Analysis/Data Science <br> Intermediate to Advanced</h3>
+                          <p>8 weeks</p>
+                          <ul>
+                              <li>PostgreSQL</li>
+                              <li>Python Optional</li>
+                              <li>Power BI</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>UI/UX Design</h3>
+                          <p>12 weeks</p>
+                          <ul>
+                              <li>Figma/Adobe XD</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Website Design - Frontend</h3>
+                          <p>8 weeks</p>
+                          <ul>
+                              <li>HTML, CSS & any JS Framework</li>
+                              <li>ReactJS | AngularJS | Python Django</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Web Development - Backend</h3>
+                          <p>12 weeks</p>
+                          <ul>
+                              <li>MySQL, PHP & Ajax or NodeJS</li>
+                              <li>Firebase</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Graphics Design</h3>
+                          <p>8 weeks</p>
+                          <ul>
+                              <li>CorelDraw or Adobe Illustrator</li>
+                              <li>Adobe Photoshop</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Office Suite</h3>
+                          <p>4 weeks</p>
+                          <ul>
+                              <li>Microsoft Word</li>
+                              <li>Microsoft PowerPoint</li>
+                              <li>Microsoft Excel</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+                  <div class="col dan">
+                      <div class="course-card">
+                          <h3>Product Management</h3>
+                          <p>6 weeks</p>
+                          <ul>
+                              <li>GITHUB</li>
+                              <li>Microsoft Teams</li>
+                              <li>Google Analytics</li>
+                          </ul>
+                          <button>Buy Now</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="real">
+            <section class="faq-section">
+                <div class="faq-header">
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                    <p>Browse through our frequently asked questions to get insights</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What courses do you offer?</button>
+                        <div class="faq-answer">
+                            <p>We offer a wide range of courses in data science, web development, UI/UX design, and more.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you provide certification upon course completion?</button>
+                        <div class="faq-answer">
+                            <p>Yes, certifications are provided upon successfully completing the courses.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is the duration of your courses?</button>
+                        <div class="faq-answer">
+                            <p>Our courses range from 4 to 12 weeks depending on the program.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you handle both front-end and back-end development?</button>
+                        <div class="faq-answer">
+                            <p>Yes, we specialize in both front-end and back-end development courses.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+            <br>
+            <div class="den">
+            <div class="contact-section container">
+                <div class="text-center" style="margin-top: 10%;">
+                    <span style="padding: 12px; border-radius: 20px; background-color: #0c7bf141; font-size: 12px; color: blue;">Contact</span>
+                    <h2 class="mt-3" style="color: rgba(32, 32, 185, 0.795);">Get in Touch with us,TODAY!</span></h2>
+                    <p class="text-muted">Call or send us your questions or concerns by starting a new Inquiry and we will <br>give you the help you need.</p>
+                </div>
+                <br>
+                <div class="row text-center">
+                  <div class="col-md-4">
+                      <div class="contact-box">
+                        <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 40px;"></i>
+                          <h5>Our Address</h5>
+                          <p>Suite 3, Hadiza Plaza,<br>Zuma Bakery Junction, Kubwa-Abuja</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="contact-box">
+                        <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px;"></i>
+                          <h5>Email Us</h5>
+                          <p>info@gateway-computers.com</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="contact-box">
+                        <i class="fa fa-phone" aria-hidden="true" style="font-size: 40px;"></i>
+                          <h5>Call Us</h5>
+                          <p>+234 (0) 81 6377 1731</p>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Map and Form -->
+              <div class="row mt-4">
+                  <!-- Google Map -->
+                  <div class="col-md-6">
+                      <iframe
+                          class="map"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.631324561412!2d7.3677191!3d9.05785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104dd9b1b2593473%3A0x4c0b2550eb3545c5!2sGateway%20Computers%2C%20Abuja!5e0!3m2!1sen!2sng!4v1684952140853!5m2!1sen!2sng"
+                          allowfullscreen=""
+                          loading="lazy">
+                      </iframe>
+                  </div>
+      
+                  <!-- Contact Form -->
+                  <div class="col-md-6">
+                      <form>
+                          <input type="text" class="form-control" placeholder="Your Name" required>
+                          <input type="email" class="form-control" placeholder="Your Email" required>
+                          <input type="text" class="form-control" placeholder="Subject" required>
+                          <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                          <button type="submit" class="btn btn-primary w-20" style="margin-left: 35%;">Send Message</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <footer class=" py-5" >
+            <div class="container">
+                <!-- Newsletter Section -->
+                <div class="text-center mb-5" style="background-color: rgba(36, 36, 226, 0.459); padding: 20px;">
+                    <h5 class="fw-bold">Join Our Newsletter</h5>
+                    <p>Subscribe to stay up to date with us</p>
+                    <div class="d-flex justify-content-center">
+                        <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+        
+                <!-- Footer Content -->
+                <div class="row text-center text-md-start bg-light" style="padding: 20px;" >
+                    <!-- Contact Info -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="fw-bold">Gateway Computer Technology</h6>
+                        <p>Suite 3, Hadiza Plaza,<br> Zuma Bakery Junction, Kubwa-Abuja</p>
+                        <p>Phone: +234 (0) 81 6377 1731</p>
+                        <p>Email: info@gateway-computers.com</p>
+                    </div>
+        
+                    <!-- Useful Links -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="fw-bold">Useful Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-dark">Home</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">About us</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Services</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Terms of service</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Privacy policy</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Our Services -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="fw-bold">Our Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-dark">Web Design</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Web Development</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Product Management</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Marketing</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">Graphic Design</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Social Networks -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="fw-bold">Our Social Networks</h6>
+                        <p>Follow us on our social media platforms</p>
+                        <div>
+                            <a href="#" class="text-dark me-3">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-dark me-3">
+                                <i class="fa fa-instagram" aria-hidden="true" style="margin-left: 10px;"></i>
+                            </a>
+                            <a href="#" class="text-dark">
+                                <i class="fa fa-linkedin" aria-hidden="true" style="margin-left: 10px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Footer Bottom -->
+                <div class="text-center mt-4" style="background-color: rgba(36, 36, 226, 0.459); padding: 20px;">
+                    <p class="mb-0">&copy; Copyright Gateway Computer Technology. All Rights Reserved</p>
+                    <p class="mb-0">Designed by Gateway Computer Technology</p>
+                </div>
+            </div>
+        </footer>
+        
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      // Select all FAQ question buttons
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+        const faqItem = question.parentElement;
+        const faqAnswer = faqItem.querySelector(".faq-answer");
+
+        // Close other open items
+        const activeItem = document.querySelector(".faq-item.active");
+        if (activeItem && activeItem !== faqItem) {
+            activeItem.classList.remove("active");
+            activeItem.querySelector(".faq-answer").style.maxHeight = null;
+        }
+
+        // Toggle current item
+        faqItem.classList.toggle("active");
+
+        if (faqItem.classList.contains("active")) {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px"; // Set height to allow animation
+        } else {
+            faqAnswer.style.maxHeight = null; // Collapse smoothly
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
